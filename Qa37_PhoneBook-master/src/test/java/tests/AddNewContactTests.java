@@ -13,7 +13,7 @@ public class AddNewContactTests extends TestBase{
     @BeforeClass
     public void preCondition(){
         if (!app.getHelperUser().isLogged()) {
-            app.getHelperUser().login(new User().withEmail("noa@gmail.com").withPassword("Nnoa12345$"));
+            app.getHelperUser().login(new User().withEmail("eldar@mail.com").withPassword("Aa123456!"));
         }
 
     }
@@ -22,12 +22,12 @@ public class AddNewContactTests extends TestBase{
     public void  addContactSuccessAllFields(){
         int i= new Random().nextInt(1000)+1000;
         Contact contact = Contact.builder()
-                .name("Tony")
-                .lastName("Stark")
-                .address("NY")
-                .phone("34343434"+i)
-                .email("stark"+i+"@gmail.com")
-                .description("The best")
+                .name("Eldar")
+                .lastName("Jonf")
+                .address("CY")
+                .phone("363211"+i)
+                .email("eldar"+i+"@gmail.com")
+                .description("Nice ")
                 .build();
         app.helperContact().openContactForm();
         app.helperContact().fillContactForm(contact);
@@ -41,11 +41,11 @@ public class AddNewContactTests extends TestBase{
     public void  addContactSuccessRequiredFields(){
         int i= new Random().nextInt(1000)+1000;
         Contact contact = Contact.builder()
-                .name("Tony"+i)
-                .lastName("Stark")
-                .address("NY")
-                .phone("34343434"+i)
-                .email("stark"+i+"@gmail.com")
+                .name("Eldar"+i)
+                .lastName("Jonf")
+                .address("CY")
+                .phone("363211"+i)
+                .email("eldar"+i+"@gmail.com")
                 .build();
         app.helperContact().openContactForm();
         app.helperContact().fillContactForm(contact);
@@ -58,10 +58,10 @@ public class AddNewContactTests extends TestBase{
     public void addNewContactWrongName(){
         Contact contact = Contact.builder()
                 .name("")
-                .lastName("Stark")
-                .address("NY")
-                .phone("3434343434")
-                .email("stark@gmail.com")
+                .lastName("Jonf")
+                .address("CY")
+                .phone("363211636")
+                .email("eldar@gmail.com")
                 .build();
         app.helperContact().openContactForm();
         app.helperContact().fillContactForm(contact);
@@ -72,12 +72,12 @@ public class AddNewContactTests extends TestBase{
     @Test
     public void  addNewContactWrongAddress(){
         Contact contact = Contact.builder()
-                .name("Tony")
-                .lastName("Stark")
+                .name("Eldar")
+                .lastName("Jonf")
                 .address("")
-                .phone("3434343434")
-                .email("stark@gmail.com")
-                .description("The best")
+                .phone("363211636")
+                .email("eldar@gmail.com")
+                .description("Nice")
                 .build();
         app.helperContact().openContactForm();
         app.helperContact().fillContactForm(contact);
@@ -89,12 +89,12 @@ public class AddNewContactTests extends TestBase{
     @Test
     public void addNewContactWrongLastName(){
         Contact contact = Contact.builder()
-                .name("Tony")
+                .name("Eldar")
                 .lastName("")
-                .address("NY")
-                .phone("3434343434")
-                .email("stark@gmail.com")
-                .description("The best")
+                .address("CY")
+                .phone("1234567891234")
+                .email("eldar@gmail.com")
+                .description("Nice")
                 .build();
         app.helperContact().openContactForm();
         app.helperContact().fillContactForm(contact);
@@ -104,12 +104,12 @@ public class AddNewContactTests extends TestBase{
     @Test
     public void addNewContactWrongPhone(){
         Contact contact = Contact.builder()
-                .name("Tony")
-                .lastName("Stark")
-                .address("NY")
+                .name("Eldar")
+                .lastName("Jonf")
+                .address("CY")
                 .phone("")
-                .email("stark@gmail.com")
-                .description("The best")
+                .email("eldar@gmail.com")
+                .description("Nice")
                 .build();
         app.helperContact().openContactForm();
         app.helperContact().fillContactForm(contact);
@@ -122,12 +122,12 @@ public class AddNewContactTests extends TestBase{
     @Test
     public void addNewContactWrongEmail(){
         Contact contact = Contact.builder()
-                .name("Tony")
-                .lastName("Stark")
-                .address("NY")
+                .name("Eldar")
+                .lastName("Jonf")
+                .address("CY")
                 .phone("1234567891234")
-                .email("starkgmail.com")
-                .description("The best")
+                .email("eldargmail.com")
+                .description("Nice")
                 .build();
         app.helperContact().openContactForm();
         app.helperContact().fillContactForm(contact);
