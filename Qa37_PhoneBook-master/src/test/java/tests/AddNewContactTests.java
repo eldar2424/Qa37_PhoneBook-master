@@ -57,10 +57,10 @@ public class AddNewContactTests extends TestBase{
     @Test
     public void addNewContactWrongName(){
         Contact contact = Contact.builder()
-                .name("")
+                .name(" ")
                 .lastName("Jonf")
                 .address("CY")
-                .phone("363211636")
+                .phone("36321163632")
                 .email("eldar@gmail.com")
                 .build();
         app.helperContact().openContactForm();
@@ -92,7 +92,7 @@ public class AddNewContactTests extends TestBase{
                 .name("Eldar")
                 .lastName("")
                 .address("CY")
-                .phone("1234567891234")
+                .phone("12345678912")
                 .email("eldar@gmail.com")
                 .description("Nice")
                 .build();
@@ -125,7 +125,7 @@ public class AddNewContactTests extends TestBase{
                 .name("Eldar")
                 .lastName("Jonf")
                 .address("CY")
-                .phone("1234567891234")
+                .phone("12345678922")
                 .email("eldargmail.com")
                 .description("Nice")
                 .build();
@@ -133,7 +133,7 @@ public class AddNewContactTests extends TestBase{
         app.helperContact().fillContactForm(contact);
         app.helperContact().saveContact();
         Assert.assertTrue(app.helperContact().isAddPageStillDisplayed());
-        Assert.assertTrue(app.getHelperUser().isAlertPresent("Email not valid: must be a well-formed email address"));
+        Assert.assertTrue(app.getHelperUser().isAlertPresent(" Email not valid: must be a well-formed email address"));
 
     }
 
