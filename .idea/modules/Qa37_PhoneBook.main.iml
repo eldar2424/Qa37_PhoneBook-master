@@ -4,5 +4,8 @@
     <content url="file://$MODULE_DIR$/../../Qa37_PhoneBook-master/build/generated/sources/annotationProcessor/java/main">
       <sourceFolder url="file://$MODULE_DIR$/../../Qa37_PhoneBook-master/build/generated/sources/annotationProcessor/java/main" isTestSource="false" generated="true" />
     </content>
+    <content url="file://$MODULE_DIR$/../../Qa37_PhoneBook-master/src/main">
+      <sourceFolder url="file://$MODULE_DIR$/../../Qa37_PhoneBook-master/src/main/resources" type="java-resource" />
+    </content>
   </component>
 </module>
